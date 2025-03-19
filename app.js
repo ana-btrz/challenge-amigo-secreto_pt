@@ -12,3 +12,12 @@ function adicionarAmigo() {
 
     }
 }
+
+
+function atualizarLista() {
+    let listaHTML =document.getElementById("listaAmigos");
+
+ // Limpa a lista antes de adicionar os novos itens
+    listaHTML.innerHTML = ""; 
+
+}
