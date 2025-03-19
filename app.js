@@ -30,10 +30,15 @@ function atualizarLista() {
     }
 
 }
-
+  //sortear aleatoriamente 
 function sortearAmigo() {
     if (listaDeAmigos.length === 0) {
         alert("Adicione pelo menos um amigo para sortear.");
         return;
     }
+
+    const sorteado = listaDeAmigos[Math.floor(Math.random() * listaDeAmigos.length)];
+    const resultadoHTML = document.getElementById("resultado");
+
+    resultadoHTML.innerHTML = `<li>O amigo secreto sorteado é: ${sorteado}</li>`;
 }
