@@ -10,6 +10,8 @@ function adicionarAmigo() {
 
         document.getElementById("amigo").value = "";
 
+        atualizarLista();
+
     }
 }
 
@@ -20,11 +22,18 @@ function atualizarLista() {
  // Limpa a lista antes de adicionar os novos itens
     listaHTML.innerHTML = ""; 
 
-
+ // cada amigo da lista se torna um item
     for (let i = 0; i < listaDeAmigos.length; i++) {
         let item = document.createElement("li");
         item.textContent = listaDeAmigos[i]; // Define o texto do item <li>
         listaHTML.appendChild(item);
     }
 
+}
+
+function sortearAmigo() {
+    if (listaDeAmigos.length === 0) {
+        alert("Adicione pelo menos um amigo para sortear.");
+        return;
+    }
 }
