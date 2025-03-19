@@ -20,4 +20,11 @@ function atualizarLista() {
  // Limpa a lista antes de adicionar os novos itens
     listaHTML.innerHTML = ""; 
 
+
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        let item = document.createElement("li");
+        item.textContent = listaDeAmigos[i]; // Define o texto do item <li>
+        listaHTML.appendChild(item);
+    }
+
 }
